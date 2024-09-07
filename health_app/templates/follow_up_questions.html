@@ -1,0 +1,40 @@
+{% if top_disease %}
+    <h2>Top Predicted Disease: {{ top_disease.name }} ({{ top_disease.probability|floatformat:2 }}%)</h2>
+    
+    {% if follow_up_questions %}
+        <h3>Follow-up Questions:</h3>
+        <form method="post" action="{% url 'process_follow_up' %}">
+            {% csrf_token %}
+            <input type="hidden" name="report_id" value="{{ report_id }}">
+            {% for question in follow_up_questions %}
+                <p>{{ question.question_text }}</p>
+                <input type="radio" name="question_{{ question.id }}" value="Yes"> Yes
+                <input type="radio" name="question_{{ question.id }}" value="No"> No
+            {% endfor %}
+            <button type="submit">Submit Answers</button>
+        </form>
+    {% else %}
+        <p>No follow-up questions available for the predicted disease.</p>
+    {% endif %}
+    
+    <a href="{% url 'report_symptoms' %}">Go Back to Symptom Selection</a>
+{% else %}
+    <h2>{{ message }}</h2>
+    
+    {% if general_questions %}
+        <h3>General Health Questions:</h3>
+        <form method="post" action="{% url 'process_follow_up' %}">
+            {% csrf_token %}
+            <input type="hidden" name="report_id" value="{{ report_id }}">
+            {% for question in general_questions %}
+                <p>{{ question.question_text }}</p>
+                <textarea name="answer_{{ question.id }}"></textarea>
+            {% endfor %}
+            <button type="submit">Submit Answers</button>
+        </form>
+    {% else %}
+        <p>No general health questions available.</p>
+    {% endif %}
+    
+    <a href="{% url 'report_symptoms' %}">Go Back to Symptom Selection</a>
+{% endif %}

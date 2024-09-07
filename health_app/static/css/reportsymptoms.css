@@ -1,0 +1,86 @@
+/* General styling for the form container */
+form {
+    background-color: #e0f2f1; /* Light teal background */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Padding inside the form */
+    max-width: 600px; /* Max width of the form */
+    margin: auto; /* Center the form horizontally */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Heading styling */
+h2 {
+    color: #004d40; /* Dark teal color for heading */
+    font-size: 2em; /* Font size */
+    margin-bottom: 20px; /* Space below the heading */
+    text-align: center;
+}
+
+/* Styling for symptom select fields */
+select {
+    width: calc(100% - 20px); /* Full width minus padding */
+    padding: 10px; /* Padding inside select */
+    border: 1px solid #004d40; /* Teal border */
+    border-radius: 5px; /* Rounded corners */
+    margin-bottom: 15px; /* Space below each select field */
+    background-color: #ffffff; /* White background */
+    color: #004d40; /* Teal text color */
+}
+
+/* Button container styling */
+.button-container {
+    display: flex;
+    justify-content: space-between; /* Space out buttons */
+    gap: 10px; /* Space between buttons */
+    margin-top: 20px; /* Space above the button container */
+}
+
+/* Add Another Symptom button styling */
+#addSymptom {
+    background-color: #004d40; /* Teal background */
+    color: #ffffff; /* White text */
+    border: none; /* Remove default border */
+    padding: 10px 20px; /* Padding inside the button */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+#addSymptom:hover {
+    background-color: #00796b; /* Darker teal on hover */
+}
+
+/* Submit button styling */
+button[type="submit"] {
+    background-color: #004d40; /* Teal background */
+    color: #ffffff; /* White text */
+    border: none; /* Remove default border */
+    padding: 10px 20px; /* Padding inside the button */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+button[type="submit"]:hover {
+    background-color: #00796b; /* Darker teal on hover */
+}
+
+/* Back to Home Page link styling */
+.back-to-home {
+    display: inline-block; /* Make it a block-level element */
+    padding: 10px 20px; /* Padding inside the link */
+    background-color: #004d40; /* Teal background */
+    color: #ffffff; /* White text */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Make text bold */
+    text-align: center; /* Center-align text */
+    margin-top: 20px; /* Space above the link */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.back-to-home:hover {
+    background-color: #00796b; /* Darker teal on hover */
+}

@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block extra_css %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/reportsymptoms.css' %}">
+{% endblock %}
+
+{% block content %}
+<h2>Report your symptoms here!</h2>
+<form method="post" id="symptomForm">
+    {% csrf_token %}
+
+    <div id="symptomFields">
+        <div class="symptom-row">
+            <select name="symptoms[]" required>
+                <option value="">Select a symptom</option>
+                {% for symptom in symptoms %}
+                    <option value="{{ symptom.id }}">{{ symptom.name }}</option>
+                {% endfor %}
+            </select>
+        </div>
+    </div>
+    <div class="button-container">
+        <button type="button" id="addSymptom">Add Another Symptom</button>
+        <button type="submit">Submit</button>
+    </div>
+
+    <!-- Back to Home Page link below the submit button -->
+    <a href="{% url 'home' %}" class="back-to-home">Back to Home </a>
+</form>
+
+<script>
+document.getElementById('addSymptom').addEventListener('click', function() {
+    var symptomFields = document.getElementById('symptomFields');
+    var newRow = document.createElement('div');
+    newRow.className = 'symptom-row';
+    newRow.innerHTML = `
+        <select name="symptoms[]" required>
+            <option value="">Select a symptom</option>
+            {% for symptom in symptoms %}
+                <option value="{{ symptom.id }}">{{ symptom.name }}</option>
+            {% endfor %}
+        </select>
+    `;
+    symptomFields.appendChild(newRow);
+});
+</script>
+{% endblock %}

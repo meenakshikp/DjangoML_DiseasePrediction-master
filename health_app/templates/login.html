@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block title %}Login - Cure Compass{% endblock %}
+
+{% block extra_css %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="login-page">
+    <div class="content-wrapper">
+        <div class="form-container">
+            <h2>LOGIN</h2>
+            <form method="post">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="id_username">Username</label>
+                    {{ form.username }}
+                </div>
+                <div class="form-group">
+                    <label for="id_password">Password</label>
+                    {{ form.password }}
+                </div>
+                <button type="submit">Login</button>
+            </form>
+            <div class="register-link">
+                <p>Not registered? <a href="{% url 'register' %}">Create an account</a></p>
+            </div>
+            <div class="home-link">
+                <a href="{% url 'home' %}">Back to Home</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+        &copy; 2024 Cure Compass. All rights reserved.
+    </footer>
+</div>
+{% endblock %}

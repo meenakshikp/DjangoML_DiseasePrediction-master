@@ -1,0 +1,184 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
+</head>
+
+<div class="background-container">
+    <img src="{% static 'images/img3.jpg' %}" alt="Background Image" id="background-image">
+</div>
+<div class="content-wrapper">
+
+    <div class="heading-container">
+        <h1>
+            <img src="{% static 'images/logo.png' %}" alt="Cure Compass Logo" class="heading-logo">
+            CURE COMPASS
+        </h1>
+        
+    </div>
+  
+    <div class="top-container">
+        
+        <div class="auth-links-container">
+            <div class="navigate-buttons">
+                <a href="#awareness-articles " class="navigate-button">Awareness Articles</a>
+                <a href="#about-us" class="navigate-button">About Us</a>
+            </div>
+            {% if user.is_authenticated %}
+            <a href="{% url 'report_symptoms' %}" class="report-button">Report symptoms</a> 
+        
+                <form method="POST" action="{% url 'logout' %}">
+                    {% csrf_token %}
+                    <button type="submit" class="auth-link">Logout</button>
+                </form>
+                
+    
+            {% else %}
+                {% if is_homepage %}
+                    <a href="{% url 'login' %}" class="auth-link">Login</a>
+                    <a href="{% url 'register' %}" class="auth-link">Register</a>
+                {% endif %}
+            {% endif %}
+        </div>
+    </div>
+
+    <div class="heading-container">
+        <img src="{% static 'images/logo.png' %}" alt="Cure Compass Logo" class="logo">
+        {% if not user.is_authenticated %}
+        <h2>Welcome to Cure Compass!</h2>
+        {% endif %}
+    </div>
+
+    {% if  user.is_authenticated %}
+    <h2>Welcome to Cure Compass, {{ user.username }}! </h2>
+    {% endif %}
+    
+    <p>Our platform empowers you to take charge of your health by providing personalized insights based on your reported symptoms. 
+        With our easy-to-use symptom checker, get accurate predictions and recommendations for medical tests, find nearby clinics. Our goal is to help you make informed health decisions with confidence and ease. Start exploring now to discover how we can support your journey to better health!</p>
+    
+        {% if user.is_authenticated %}
+        
+        
+    {% endif %}
+        {% if not user.is_authenticated %}
+        <div class="scroll-section">
+        <p>If not registered, please register to report your symptoms...</p>
+    </div>
+    {% endif %}
+</div>
+</div>
+
+<!-- Awareness Articles Section -->
+    <div id="awareness-articles " class="awareness-articles scroll-section">
+        <h2>Awareness Articles</h2>
+        <div class="articles-container scroll-section">
+            <!-- Article 1 -->
+            <div class="article scroll-section">
+                <img src="{% static 'images/img5.jpeg' %}" alt="Infectious Diseases">
+                <div class="article-textbox scroll-section">
+                    <h3><a href="https://www.who.int/news-room/fact-sheets/detail/infectious-diseases" target="_blank">Infectious Diseases</a></h3>
+                    <p>Information on preventing diseases like tuberculosis and malaria.</p>
+                </div>
+            </div>
+            <!-- Article 2 -->
+            <div class="article scroll-section">
+                <img src="{% static 'images/img6.jpeg' %}" alt="Healthy Aging">
+                <div class="article-textbox scroll-section">
+                    <h3><a href="https://www.who.int/news-room/fact-sheets/detail/ageing-and-health" target="_blank">Healthy Aging</a></h3>
+                    <p>Exercises and lifestyle habits to maintain flexibility and strength.</p>
+                </div>
+            </div>
+            <!-- Article 3 -->
+            <div class="article scroll-section">
+                <img src="{% static 'images/img7.jpeg' %}" alt="Skin Health">
+                <div class="article-textbox scroll-section">
+                    <h3><a href="https://www.healthline.com/health/skin-disorders" target="_blank">Skin Health</a></h3>
+                    <p>Tips on maintaining healthy skin and preventing common skin issues.</p>
+                </div>
+            </div>
+            <!-- Article 4 -->
+            <div class="article scroll-section">
+                <img src="{% static 'images/img8.png' %}" alt="Common Concerns">
+                <div class="article-textbox scroll-section">
+                    <h3><a href="https://www.webmd.com/allergies/default.htm" target="_blank">Common Concerns</a></h3>
+                    <p>How to manage allergies and prevent seasonal allergies.</p>
+                </div>
+            </div>
+            <!-- Article 5 -->
+            <div class="article scroll-section">
+                <img src="{% static 'images/img9.jpg' %}" alt="Disease Prevention and Lifestyle">
+                <div class="article-textbox scroll-section">
+                    <h3><a href="https://www.cdc.gov/prevention/" target="_blank">Disease Prevention and Lifestyle</a></h3>
+                    <p>Tips on hygiene practices, vaccination, and healthy habits.</p>
+                </div>
+            </div>
+            <!-- Article 6 -->
+            <div class="article scroll-section">
+                <img src="{% static 'images/img10.jpg' %}" alt="Nutrition and Healthy Eating">
+                <div class="article-textbox scroll-section">
+                    <h3><a href="https://www.hsph.harvard.edu/nutritionsource/" target="_blank">Nutrition and Healthy Eating</a></h3>
+                    <p>Explore foods and dietary habits that strengthen the immune system.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<!-- About Section -->
+<div id="about-us" class="about-us scroll-section">
+    <h2>About Us</h2>
+    <div id="about" class="about scroll-section">
+        <div class="about-box">
+            <p>
+                At Cure Compass, we are dedicated to empowering individuals to take charge of their health with ease and confidence. 
+                Our platform combines cutting-edge technology with expert medical insights to provide users with personalized, reliable 
+                health predictions based on reported symptoms. Whether you're looking for accurate disease predictions, test recommendations, 
+                or guidance on finding nearby clinics and doctors, Cure Compass is here to guide you through every step of your health journey.
+           
+                Our mission is to bridge the gap between healthcare and technology by offering a user-friendly, accessible tool that 
+                helps people make informed decisions about their well-being. With a focus on privacy, accuracy, and accessibility, 
+                Cure Compass strives to be your trusted companion in managing your health. We believe that by empowering individuals with 
+                knowledge, we can promote healthier communities and improve overall healthcare outcomes.
+            
+                Start your health journey with us today and experience the benefits of having a reliable health prediction tool right at your fingertips.
+                Together, we can navigate the complexities of healthcare and help you live a healthier, happier life.
+            </p>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Function to check if an element is in the viewport
+    function isElementInViewport(el) {
+        const rect = el.getBoundingClientRect();
+        return (
+            rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.bottom >= 0
+        );
+    }
+
+    // Handle scroll event
+    function handleScroll() {
+        const sections = document.querySelectorAll('.scroll-section'); // Select all scroll sections
+        sections.forEach(section => {
+            if (isElementInViewport(section)) {
+                section.classList.add('visible'); // Add 'visible' class when in the viewport
+            } else {
+                section.classList.remove('visible'); // Remove 'visible' class when out of viewport
+            }
+        });
+    }
+
+    // Listen for the scroll event
+    window.addEventListener('scroll', handleScroll);
+
+    // Trigger the scroll handler when the page loads, in case some sections are already in view
+    window.addEventListener('load', handleScroll);
+</script>
+
+
+<footer>
+    <p>&copy; 2024 Cure Compass. All rights reserved.</p>
+</footer>
+{% endblock %}

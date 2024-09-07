@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load widget_tweaks %}
+
+{% block content %}
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/register.css' %}">
+</head>
+<div class="register-page">
+    
+    <form method="post" id="registration-form">
+        <h2 class="register-heading">REGISTER HERE!</h2>
+        {% csrf_token %}
+        
+        <div>
+            <label for="username">Username:</label>
+            {{ form.username|add_class:"form-control"|attr:"placeholder:Enter your username" }}
+            {% if form.username.errors %}
+                <div class="text-danger">{{ form.username.errors }}</div>
+            {% endif %}
+            <small>Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only.</small>
+        </div>
+
+        <div>
+            <label for="email">Email address:</label>
+            {{ form.email|add_class:"form-control"|attr:"placeholder:Enter your email" }}
+            {% if form.email.errors %}
+                <div class="text-danger">{{ form.email.errors }}</div>
+            {% endif %}
+        </div>
+
+        <div>
+            <label for="password">Password:</label>
+            {{ form.password1|add_class:"form-control"|attr:"placeholder:Enter your password" }}
+            {% if form.password1.errors %}
+                <div class="text-danger">{{ form.password1.errors }}</div>
+            {% endif %}
+            <small>Your password must contain at least 8 characters, and can't be too similar to your other personal information.</small>
+        </div>
+
+        <div>
+            <label for="password_confirmation">Password confirmation:</label>
+            {{ form.password2|add_class:"form-control"|attr:"placeholder:Confirm your password" }}
+            {% if form.password2.errors %}
+                <div class="text-danger">{{ form.password2.errors }}</div>
+            {% endif %}
+        </div>
+
+        <div>
+            <label for="age">Age:</label>
+            {{ form.age|add_class:"form-control"|attr:"placeholder:Enter your age" }}
+            {% if form.age.errors %}
+                <div class="text-danger">{{ form.age.errors }}</div>
+            {% endif %}
+        </div>
+        
+        <div>
+            <label for="gender">Gender:</label>
+            {{ form.gender|add_class:"form-control" }}
+            {% if form.gender.errors %}
+                <div class="text-danger">{{ form.gender.errors }}</div>
+            {% endif %}
+        </div>
+        <div>
+            <label for="terms">I agree to the <a href="{% url 'terms_and_conditions' %}" target="_blank">Terms and Conditions</a>:</label>
+            {{ form.terms }}
+            {% if form.terms.errors %}
+                <div class="text-danger">{{ form.terms.errors }}</div>
+            {% endif %}
+        </div>
+
+        <button type="submit" class="btn btn-primary">Register</button>
+        <div class="register-link">
+            <p>Already have an account ? <a href="{% url 'login' %}">Login to your account</a></p>
+        </div>
+        <!-- Back to Home link inside the form -->
+        <div style="margin-top: 15px;">
+            <a href="{% url 'home' %}" class="btn btn-secondary">Back to Home</a>
+        </div>
+    </form>
+    <footer>
+        &copy; 2024 Cure Compass. All rights reserved.
+    </footer>
+</div>
+
+{% endblock %}

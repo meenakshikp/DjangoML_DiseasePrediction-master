@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Initial Prediction</h2>
+<p>Based on your reported symptoms, the initial prediction is:</p>
+<p>{{ top_disease.name }}: {{ top_disease.probability|floatformat:2 }}% match</p>
+
+<p>Note: This is an initial assessment based on limited information.</p>
+
+<a href="{% url 'follow_up_questions' report_id %}" class="btn btn-primary">Answer Follow-up Questions</a>
+
+<p>Disclaimer: This system provides general information and is not a substitute for professional medical advice. Please consult a healthcare professional for proper diagnosis and treatment.</p>
+{% endblock %}

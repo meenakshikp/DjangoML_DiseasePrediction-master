@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction Result</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/prediction_result.css' %}">
+</head>
+<body>
+    <div class="container">
+        <p><span class="predicted-disease-label">PREDICTED DISEASE FOR THE PROVIDED SYMPTOMS IS:</span> 
+           <span class="predicted-disease">{{ predicted_disease }}</span></p>
+        <p><strong>Selected symptoms:</strong></p>
+        <ul>
+            {% for symptom in selected_symptoms %}
+                <li>{{ symptom.name }}</li>
+            {% empty %}
+                <li>No symptoms selected.</li>
+            {% endfor %}
+        </ul>
+        <a href="{% url 'report_symptoms' %}">Back to reporting symptoms</a>
+    </div>
+
+    <footer>
+
+            &copy; 2024 Cure Compass. All rights reserved.
+        
+    </footer>
+    
+</body>
+</html>

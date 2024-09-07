@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Your Reported Symptoms</h2>
+
+<a href="{% url 'home' %}">Home</a>
+
+{% if user_symptoms %}
+    <table>
+        <thead>
+            <tr>
+                <th>Symptom</th>
+                <th>Severity</th>
+                <th>Reported On</th>
+                <th>View Report</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for symptom in user_symptoms %}
+            <tr>
+                <td>{{ symptom.symptom.name }}</td>
+                <td>{{ symptom.get_severity_display }}</td>
+                <td>{{ symptom.date_reported|date:"M d, Y" }}</td>
+                <td><a href="{% url 'view_report' symptom.id %}">View Report</a></td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% else %}
+    <p>You haven't reported any symptoms yet.</p>
+{% endif %}
+
+<a href="{% url 'report_symptoms' %}">Report a new symptom</a>
+{% endblock %}

@@ -1,0 +1,90 @@
+/* prediction_result.css */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f4f4; /* Very light teal background */
+    color: #333; /* Darker text color for better readability */
+    margin: 0;
+    padding: 0;
+    text-align: center; 
+    align-items: center;/* Center text in the body */
+    justify-content: center;
+    min-height: 100vh;
+}
+
+h1 {
+    background-color: #00796b; /* Teal background for heading */
+    color: #fff; /* White text color for heading */
+    text-align: center;
+    padding: 20px 0;
+    margin: 0;
+    border-bottom: 4px solid #004d40; /* Dark teal underline */
+}
+
+p {
+    margin: 20px auto;
+    font-size: 16px;
+    max-width: 800px; /* Center content */
+}
+
+strong {
+    color: #00796b; /* Teal color for strong elements */
+}
+
+/* New CSS class for the predicted disease label */
+.predicted-disease-label {
+    font-size: 18px; /* Slightly larger font size */
+    font-weight: 600; /* Slightly bolder text */
+    color: #00796b; /* Teal color for emphasis */
+    display: block; /* Ensure it’s a block-level element for centering */
+    margin: 20px auto; /* Centered with margins */
+}
+
+/* New CSS class for the predicted disease */
+.predicted-disease {
+    font-size: 24px; /* Larger font size */
+    font-weight: bold; /* Bold text */
+    color: #00796b; /* Teal color for emphasis */
+    display: block; /* Ensure it’s a block-level element for centering */
+    margin: 20px auto; /* Centered with margins */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px auto;
+    max-width: 800px; /* Center content */
+}
+
+li {
+    background: #ffffff; /* White background for list items */
+    border: 1px solid #e0f2f1; /* Light teal border */
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+a {
+    display: inline-block;
+    text-align: center;
+    margin: 20px;
+    padding: 12px 20px;
+    background-color: #00796b; /* Teal background for link */
+    color: #fff; /* White text color for link */
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s; /* Smooth hover effect */
+}
+
+a:hover {
+    background-color: #004d40; /* Darker teal on hover */
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+}

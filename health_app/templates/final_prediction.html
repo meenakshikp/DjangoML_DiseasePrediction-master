@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Final Prediction</h2>
+<h3>Predicted Diseases:</h3>
+<ul>
+    {% for disease in diseases %}
+        <li>{{ disease[0] }}: {{ disease[1]|floatformat:2 }}%</li>
+    {% endfor %}
+</ul>
+
+<p>Report ID: {{ report_id }}</p>
+
+<p>Disclaimer: This system provides general information and is not a substitute for professional medical advice. Please consult a healthcare professional for proper diagnosis and treatment.</p>
+{% endblock %}

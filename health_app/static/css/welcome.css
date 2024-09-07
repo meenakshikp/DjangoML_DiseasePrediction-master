@@ -1,0 +1,146 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Container for the entire page */
+.welcome-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+
+/* Create an overlay with a blurred background */
+.welcome-page::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/static/images/img3.jpg'); /* Set the background image here */
+    background-size: cover;
+    background-position: center;
+    filter: blur(5px); /* Apply the blur effect */
+    z-index: -1; /* Ensure the blur stays behind the content */
+}
+
+/* Content inside the welcome page (unblurred) */
+.welcome-page .content {
+    position: relative;
+    z-index: 1; /* Keep the content above the blurred background */
+    color: white;
+    text-align: center;
+}
+
+/* Content Wrapper */
+.content-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* Welcome Container */
+.welcome-container {
+    background: #fff;
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+}
+
+h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 1em;
+}
+
+p {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 1.5em;
+}
+
+/* Button Styles */
+.button {
+    display: inline-block;
+    background-color: #29756b;
+    color: #fff;
+    text-decoration: none;
+    padding: 0.7em 1.5em;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s;
+    margin: 0.5em; /* Add margin for spacing */
+}
+
+.button:hover {
+    background-color: #2b817b;
+}
+
+/* Specific Button for Back to Home */
+.button.back-to-home {
+    background-color: #6c757d; /* Different color for back-to-home button */
+}
+
+.button.back-to-home:hover {
+    background-color: #5a6268;
+}
+
+/* Home Link Styles */
+.home-link {
+    color: #008080; /* Teal color */
+    text-decoration: none; /* Remove underline */
+    font-size: 1em; /* Adjust font size as needed */
+    font-weight: bold; /* Bold text for emphasis */
+    padding: 0.5em; /* Padding for spacing */
+    transition: color 0.3s; /* Smooth transition for color changes */
+}
+
+.home-link:hover {
+    color: #004d40; /* Darker teal for hover state */
+    text-decoration: underline; /* Add underline on hover for better visibility */
+}
+
+.home-link:focus {
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 0 2px rgba(0, 128, 128, 0.5); /* Teal outline shadow for focus */
+}
+
+
+footer  {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    
+}
+
+/* Logout Link Styles */
+.logout-link {
+    color: #008080; /* Teal color */
+    text-decoration: none; /* Remove underline */
+    font-size: 1em; /* Adjust font size as needed */
+    font-weight: bold; /* Bold text for emphasis */
+    padding: 0.5em; /* Padding for spacing */
+    transition: color 0.3s; /* Smooth transition for color changes */
+}
+
+.logout-link:hover {
+    color: #004d40; /* Darker teal for hover state */
+    text-decoration: underline; /* Add underline on hover for better visibility */
+}
+
+.logout-link:focus {
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 0 2px rgba(0, 128, 128, 0.5); /* Teal outline shadow for focus */
+}
+
+

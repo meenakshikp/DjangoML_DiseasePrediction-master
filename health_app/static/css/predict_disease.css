@@ -1,0 +1,92 @@
+/* General page styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff; /* Light blue background */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Block content container */
+form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+/* Heading styling */
+h2 {
+    text-align: center;
+    color: #008080; /* Teal color for main heading */
+    margin-bottom: 20px;
+}
+
+/* Subheading styling */
+h3 {
+    color: #008080; /* Teal color for subheading */
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+/* Symptom list styling */
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+/* List item styling */
+li {
+    margin-bottom: 10px;
+}
+
+/* Checkbox styling */
+input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(1.2); /* Makes checkboxes slightly bigger */
+}
+
+/* Label styling */
+label {
+    font-size: 16px;
+    color: #333;
+}
+
+/* Submit button styling */
+button {
+    background-color: #008080; /* Teal color for button */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 15px;
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #004d40; /* Darker teal on hover */
+}
+
+/* Form container responsive styling */
+@media screen and (max-width: 480px) {
+    form {
+        width: 90%;
+    }
+}
+
+footer  {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    
+}

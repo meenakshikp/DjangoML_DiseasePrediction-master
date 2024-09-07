@@ -1,0 +1,44 @@
+<!-- about.html -->
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
+</head>
+
+<div class="background-container">
+    <img src="{% static 'images/img1.jpg' %}" alt="Background Image" id="background-image">
+</div>
+<div class="top-container">
+    <div class="logo-container">
+        <img src="{% static 'images/logo.png' %}" alt="Cure Compass Logo" class="heading-logo">
+    </div>
+    <h1 class="site-title">CURE COMPASS</h1>
+
+    <div class="auth-links-container">
+        {% if user.is_authenticated %}
+            <form method="POST" action="{% url 'logout' %}">
+                {% csrf_token %}
+                <button type="submit" class="auth-link">LOGOUT</button>
+            </form>
+        {% else %}
+            {% if is_homepage %}
+                <a href="{% url 'login' %}" class="auth-link">LOGIN</a>
+                <a href="{% url 'register' %}" class="auth-link">REGISTER</a>
+            {% endif %}
+        {% endif %}
+    </div>
+</div>
+
+<div class="content-wrapper">
+    <div class="heading-container">
+        <img src="{% static 'images/logo.png' %}" alt="Cure Compass Logo" class="logo">
+        <h2>About Us</h2>
+    </div>
+    <p>Welcome to Cure Compass! We are dedicated to providing you with the best tools and information to manage your health. Our platform offers personalized insights based on your reported symptoms and helps you connect with medical professionals and resources. We strive to empower you with the knowledge you need to make informed health decisions. Learn more about our mission and how we aim to support your journey to better health.</p>
+</div>
+
+<footer>
+    <p>&copy; 2024 Cure Compass. All rights reserved.</p>
+</footer>
+{% endblock %}

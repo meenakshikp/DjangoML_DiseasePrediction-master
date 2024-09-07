@@ -1,0 +1,32 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Predict Disease</title>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/predict_disease.css' %}">
+</head>
+<body>
+  {% block content %}
+    
+    <form method="post">
+      {% csrf_token %}
+      <h3>Reported Symptoms:</h3>
+      <ul>
+        {% for symptom in symptoms %}
+          <li>
+            <input type="checkbox" name="symptoms" value="{{ symptom.id }}" id="symptom_{{ symptom.id }}" checked>
+            <label for="symptom_{{ symptom.id }}">{{ symptom.name }}</label>
+          </li>
+        {% endfor %}
+      </ul>
+      <button type="submit">Predict Disease</button>
+    </form>
+  {% endblock %}
+  <footer>
+    &copy; 2024 Cure Compass. All rights reserved.
+  </footer>
+</body>
+</html>

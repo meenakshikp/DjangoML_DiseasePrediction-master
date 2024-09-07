@@ -1,0 +1,4 @@
+<h2>Final Predictions</h2>
+{% for disease, probability in diseases %}
+    <p>{{ disease }}: {{ probability|floatformat:2 }}% match</p>
+{% endfor %}

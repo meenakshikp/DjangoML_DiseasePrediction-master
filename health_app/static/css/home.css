@@ -1,0 +1,428 @@
+/* Common styles */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Blurred background image */
+.background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+#background-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    filter: blur(5px); /* Blur effect applied here */
+}
+.background-wrapper {
+    background-color: #004d40; /* Teal background color */
+    padding: 20px; /* Space around the content */
+    width: 100%; /* Full width */
+}
+
+.top-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2px; /* Reduce vertical padding to make it less tall */
+    background-color: #bec5c2;
+    width: 120%; /* Keep full width */
+    border-radius: 0; /* Keep border-radius removed */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: auto; /* Set height to auto */
+}
+
+
+/* Authentication links wrapper */
+.auth-links-wrapper {
+    width: 100%; /* Full width */
+    max-width: 800px; /* Optional: Limit the width for large screens */
+    padding: 10px 0; /* Adjust padding */
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    border: none; /* Remove border */
+    border-radius: 0; /* Remove border-radius */
+}
+
+
+/* Authentication links container */
+.auth-links-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Authentication button styles */
+.auth-link {
+    padding: 10px 20px;
+    color: #05100d; /* Matching the color of auth-link */
+    background-color: #bec5c2;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1em;
+}
+
+.auth-link:hover{
+    background-color: #30bebc;
+}
+
+
+/* Logo and Site Title Group */
+.logo-title-group {
+    display: flex;
+    align-items: center;
+}
+
+/* Logo styling */
+.logo-container img {
+    height: 60px;
+    margin-right: 10px;
+}
+
+/* Site Title styling */
+.site-title {
+    font-size: 2.5em;
+    color: #bed7cc;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    flex-grow: 1;
+    text-align: center;
+}
+
+
+/* Content Wrapper */
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    text-align: center;
+}
+
+.heading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 15px;
+    margin-top: 22px;/* Increase this value to add more space between the heading and top container */
+}
+
+.heading-container .logo {
+    height: 140px;
+    margin-bottom: 20px;
+}
+
+.heading-container-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 15px;
+    margin-top: 28px; 
+}
+
+h2 {
+    font-size: 2.5em;
+    color: #364240;
+    background: linear-gradient(to right, #9bcaca, #7d9797);
+    padding: 10px 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin: 0;
+}
+
+p {
+    
+    line-height: 1.5; /* Increase the line height for better spacing */
+    color: #e1e7e6; /* A softer color */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Subtle text shadow for depth */
+    padding: 1px; /* Add padding for spacing */
+    margin-bottom: 20px; /* Add spacing between paragraphs */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.1rem;
+}
+
+p1 {
+    font-family: 'Merriweather', serif; 
+    font-size: 1.2em;
+    color: #e1e7e6;
+}
+
+.welcome p {
+    font-size: 20px;
+}
+
+.welcome a {
+    color: #1abc9c;
+    text-decoration: none;
+    border: 2px solid #1abc9c;
+    border-radius: 5px;
+    padding: 8px 12px;
+    background-color: #e0f2f1;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.welcome a:hover {
+    color: #16a085;
+    border-color: #16a085;
+    background-color: #b2dfdb;
+    text-decoration: underline;
+}
+
+footer {
+    position: static;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+}
+
+/* Awareness Articles Section */
+.awareness-articles {
+    padding: 40px 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.awareness-articles h2 {
+    font-size: 2.2em;
+    margin-bottom: 30px;
+    color: #364240;
+}
+
+.articles-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.article {
+    opacity: 1; /* Visible by default */
+    transform: translateY(0); /* Positioned normally */
+    transition: none; /* No transition */
+}
+
+.article img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.article-textbox {
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.article h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.article h3 a {
+    text-decoration: none;
+    color: #364240;
+    transition: color 0.3s ease;
+}
+
+.article h3 a:hover {
+    color: #30bebc;
+}
+
+.article p {
+    font-size: 1em;
+    color: #555;
+}
+
+/* Registration page - no background */
+.registration-page #background-image {
+    display: none; /* Hides the background image */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .articles-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Style for the about-us section */
+.about-us {
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* Box styling for the paragraph inside "About Us" */
+.about-box {
+    background-color: #f9f9f9; /* Light background for the box */
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #ddd; /* Subtle border around the box */
+    max-width: 800px; /* Limit the width of the box */
+    margin: 20px auto; /* Center the box horizontally */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    text-align: left; /* Align text inside the box */
+}
+
+/* Adjust the typography */
+.about-box h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.about-box p {
+    line-height: 1.6;
+    font-size: 1rem;
+    color: #555;
+}
+
+
+/* Responsive adjustments for About Section */
+@media (max-width: 768px) {
+    .about-section {
+        padding: 30px 15px;
+    }
+
+    .about-section h2 {
+        font-size: 1.8em;
+    }
+
+    .about-section p {
+        font-size: 1em;
+    }
+}
+
+
+
+/* Scroll Smoothly */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Ensure the container for the logout button is positioned correctly */
+.logout-container {
+    padding: 10px 20px;
+    color: #05100d; /* Matching the color of auth-link */
+    background-color: #bec5c2;/* Same background as auth-link (transparent) */
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 10px;
+    display: inline-block;  /* Ensure it's on top of other content */
+}
+
+.report-button {
+    padding: 10px 20px;
+    color: #05100d; /* Matching the color of auth-link */
+    background-color: #bec5c2;/* Same background as auth-link (transparent) */
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 10px;
+    display: inline-block;
+}
+
+.report-button:hover {
+    background-color: #30bebc; /* Same hover effect as .auth-link */
+    color: #ffffff; /* White text on hover to match .auth-link */
+    border-color: #30bebc; /* Change border color to match hover effect */
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;  /* Vertically center the logo and heading */
+}
+
+.logo-container img {
+    height: 50px;  /* Adjust the logo height as needed */
+    margin-right: 10px;  /* Add some space between the logo and heading */
+}
+
+/* Ensure that the h1 element behaves like a flex container */
+h1 {
+    display: flex;
+    align-items: center; /* Vertically center align items */
+    justify-content: center; /* Center horizontally */
+    font-size: 3.5em; /* Adjust the font size as needed */
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0; /* Remove default margin */
+    color:#e6fdf6; /* Dark teal color for the heading text */
+}
+
+/* Style the heading logo */
+.heading-logo {
+    width: 50px; /* Adjust the logo size */
+    height: auto; /* Maintain the aspect ratio */
+    margin-right: 15px; /* Space between the logo and text */
+}
+
+
+/* Updated Navigation Buttons Styling to match .auth-link */
+.navigate-button {
+    padding: 10px 20px;
+    color: #05100d; /* Matching the color of auth-link */
+    background-color: #bec5c2;/* Same background as auth-link (transparent) */
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 10px;
+    display: inline-block;
+}
+
+.navigate-button:hover {
+    background-color: #30bebc; /* Same hover effect as .auth-link */
+    color: #ffffff; /* White text on hover to match .auth-link */
+    border-color: #30bebc; /* Change border color to match hover effect */
+}
+
+.scroll-section {
+    opacity: 0; /* Initially invisible */
+    transform: translateY(50px); /* Start slightly below the viewport */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scroll-section.visible {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Move to the original position */
+}
+

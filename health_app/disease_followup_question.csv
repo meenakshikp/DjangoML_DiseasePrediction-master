@@ -1,0 +1,159 @@
+﻿Disease,Questions?,Yes_Probability,No_Probability
+Allergy,"Are you experiencing sneezing, runny nose, or nasal congestion?",0.9,0.1
+Allergy,"Do you have itchy, watery eyes?",0.85,0.15
+Allergy,"Have you recently been exposed to any new pets, plants, or outdoor environments?",0.7,0.3
+Allergy,"Do you have any known food allergies or intolerances?",0.5,0.5
+Allergy,"Are you experiencing skin rashes or hives?",0.65,0.35
+Fungal infection,"Have you noticed any red, itchy, or scaly patches on your skin?",0.75,0.25
+Fungal infection,"Do you have any nail abnormalities, such as thickening or discoloration?",0.7,0.3
+Fungal infection,"Are you experiencing any hair loss or bald patches?",0.6,0.4
+Fungal infection,"Have you been in humid or moist environments recently?",0.65,0.35
+Fungal infection,"Have you been using any new skincare or haircare products?",0.5,0.5
+GERD,"Are you experiencing frequent heartburn or acid reflux?",0.95,0.05
+GERD,"Do you have difficulty swallowing or feel like food is stuck in your throat?",0.7,0.3
+GERD,"Are you experiencing a chronic cough or sore throat?",0.6,0.4
+GERD,"Do you often have a bitter or sour taste in your mouth?",0.8,0.2
+GERD,"Have you noticed any worsening of symptoms after eating certain foods or lying down?",0.85,0.15
+Chronic cholestasis,"Are you experiencing persistent itching, particularly at night?",0.75,0.25
+Chronic cholestasis,"Have you noticed any yellowing of your skin or eyes (jaundice)?",0.7,0.3
+Chronic cholestasis,"Are you experiencing dark urine or pale stools?",0.8,0.2
+Chronic cholestasis,"Do you have any history of liver disease or gallbladder problems?",0.65,0.35
+Chronic cholestasis,"Are you experiencing fatigue or unexplained weight loss?",0.6,0.4
+Drug Reaction,"Have you recently started taking any new medications or supplements?",0.85,0.15
+Drug Reaction,"Are you experiencing any skin rashes or hives?",0.8,0.2
+Drug Reaction,"Do you have any swelling of the face, lips, or tongue?",0.7,0.3
+Drug Reaction,"Are you experiencing difficulty breathing or wheezing?",0.6,0.4
+Drug Reaction,"Have you noticed any changes in your urine or stool color?",0.5,0.5
+Peptic ulcer disease,"Are you experiencing burning stomach pain that improves with eating?",0.7,0.3
+Peptic ulcer disease,"Do you have nausea or vomiting, especially in the morning?",0.6,0.4
+Peptic ulcer disease,"Have you noticed any blood in your vomit or stools?",0.75,0.25
+Peptic ulcer disease,"Are you experiencing unexplained weight loss?",0.5,0.5
+Peptic ulcer disease,"Do you have a history of frequent use of NSAIDs (e.g., ibuprofen, aspirin)?",0.8,0.2
+AIDS,"Are you experiencing persistent fever, night sweats, or swollen lymph nodes?",0.85,0.15
+AIDS,"Do you have unexplained weight loss or chronic diarrhea?",0.8,0.2
+AIDS,"Are you experiencing recurrent infections or unusual illnesses?",0.9,0.1
+AIDS,"Have you had any recent exposure to high-risk activities (e.g., unprotected sex, shared needles)?",0.75,0.25
+AIDS,"Do you have a history of HIV/AIDS testing?",0.65,0.35
+Gastroenteritis,"Are you experiencing diarrhea, nausea, or vomiting?",0.9,0.1
+Gastroenteritis,"Do you have abdominal cramps or pain?",0.8,0.2
+Gastroenteritis,"Have you recently eaten any questionable or undercooked food?",0.7,0.3
+Gastroenteritis,"Are you experiencing fever or chills?",0.6,0.4
+Gastroenteritis,"Have you noticed any blood or mucus in your stool?",0.5,0.5
+Bronchial Asthma,"Are you experiencing shortness of breath or wheezing?",0.85,0.15
+Bronchial Asthma,"Do you have a persistent cough, especially at night or early morning?",0.75,0.25
+Bronchial Asthma,"Are your symptoms triggered by exercise, cold air, or allergens?",0.8,0.2
+Bronchial Asthma,"Do you have a history of asthma or allergies in your family?",0.7,0.3
+Bronchial Asthma,"Are you using any inhalers or other medications for breathing issues?",0.9,0.1
+Hypertension,"Are you experiencing frequent headaches or dizziness?",0.6,0.4
+Hypertension,"Do you have any chest pain or shortness of breath?",0.5,0.5
+Hypertension,"Is there a family history of high blood pressure?",0.7,0.3
+Hypertension,"Are you experiencing any vision problems?",0.4,0.6
+Hypertension,"Do you have swelling in your legs, ankles, or feet?",0.5,0.5
+Migraine,"Are you experiencing severe, throbbing pain on one side of your head?",0.85,0.15
+Migraine,"Do you have sensitivity to light, sound, or smells during your headache?",0.8,0.2
+Migraine,"Are you experiencing nausea or vomiting along with your headache?",0.75,0.25
+Migraine,"Do you notice visual disturbances (e.g., flashes of light, blind spots) before the headache starts?",0.65,0.35
+Migraine,"How long do your headache episodes typically last?(4 to 72 hours)",0.7,0.3
+Cervical spondylosis,"Are you experiencing neck pain or stiffness?",0.8,0.2
+Cervical spondylosis,"Do you have numbness or tingling in your arms or hands?",0.7,0.3
+Cervical spondylosis,"Are you experiencing headaches that start at the back of your head?",0.6,0.4
+Cervical spondylosis,"Do you have difficulty moving your neck or upper body?",0.65,0.35
+Cervical spondylosis,"Are you experiencing muscle weakness in your arms or legs?",0.55,0.45
+Paralysis (brain hemorrhage),"Are you experiencing sudden weakness or numbness on one side of your body?",0.85,0.15
+Paralysis (brain hemorrhage),"Do you have difficulty speaking or understanding speech?",0.8,0.2
+Paralysis (brain hemorrhage),"Are you experiencing severe headache or dizziness?",0.75,0.25
+Paralysis (brain hemorrhage),"Do you have vision problems, such as double vision or loss of vision?",0.7,0.3
+Paralysis (brain hemorrhage),"Are you experiencing loss of balance or coordination?",0.75,0.25
+Jaundice,"Have you noticed yellowing of your skin or eyes?",0.9,0.1
+Jaundice,"Are you experiencing dark urine or pale stools?",0.8,0.2
+Jaundice,"Do you have a history of liver disease or hepatitis?",0.7,0.3
+Jaundice,"Are you experiencing fatigue or abdominal pain?",0.6,0.4
+Jaundice,"Have you recently traveled to areas with poor sanitation?",0.5,0.5
+Malaria,"Are you experiencing fever, chills, or sweats?",0.9,0.1
+Malaria,"Do you have a history of recent travel to malaria-endemic areas?",0.8,0.2
+Malaria,"Are you experiencing headaches, muscle aches, or fatigue?",0.75,0.25
+Malaria,"Do you have nausea, vomiting, or diarrhea?",0.6,0.4
+Malaria,"Have you noticed any jaundice or dark urine?",0.5,0.5
+Chicken pox,"Are you experiencing an itchy rash with fluid-filled blisters?",0.9,0.1
+Chicken pox,"Do you have fever, fatigue, or loss of appetite?",0.8,0.2
+Chicken pox,"Have you been in contact with someone who has chickenpox or shingles?",0.7,0.3
+Chicken pox,"Are the blisters appearing in multiple stages (new blisters alongside older scabs)?",0.85,0.15
+Chicken pox,"Do you have spots starting on your face, chest, and back before spreading?",0.75,0.25
+Dengue,"Are you experiencing high fever, severe headache, or pain behind the eyes?",0.85,0.15
+Dengue,"Do you have joint and muscle pain or a rash?",0.8,0.2
+Dengue,"Have you recently traveled to areas with known dengue outbreaks?",0.75,0.25
+Dengue,"Are you experiencing nausea, vomiting, or abdominal pain?",0.65,0.35
+Dengue,"Do you have any bleeding tendencies (e.g., nosebleeds, gum bleeding)?",0.6,0.4
+Typhoid,"Are you experiencing prolonged fever, fatigue, or weakness?",0.85,0.15
+Typhoid,"Do you have abdominal pain, diarrhea, or constipation?",0.75,0.25
+Typhoid,"Have you recently consumed potentially contaminated food or water?",0.8,0.2
+Typhoid,"Are you experiencing headaches, muscle aches, or loss of appetite?",0.7,0.3
+Typhoid,"Have you traveled to areas with known typhoid outbreaks?",0.75,0.25
+Hepatitis A,"Are you experiencing fatigue, nausea, or vomiting?",0.75,0.25
+Hepatitis A,"Have you noticed yellowing of your skin or eyes?",0.8,0.2
+Hepatitis A,"Are you experiencing dark urine or pale stools?",0.7,0.3
+Hepatitis A,"Have you recently consumed potentially contaminated food or water?",0.85,0.15
+Hepatitis A,"Do you have a history of liver disease or hepatitis?",0.5,0.5
+Hepatitis B,"Have you experienced jaundice (yellowing of the skin or eyes)?",0.75,0.25
+Hepatitis B,"Do you have dark urine or light-colored stools?",0.7,0.3
+Hepatitis B,"Have you had unprotected sexual contact or shared needles recently?",0.8,0.2
+Hepatitis C,"Have you experienced chronic fatigue or muscle/joint pain?",0.7,0.3
+Hepatitis C,"Do you have a history of blood transfusions or organ transplants before 1992?",0.8,0.2
+Hepatitis C,"Have you noticed a loss of appetite or unexplained weight loss?",0.65,0.35
+Hepatitis D,"Have you been diagnosed with Hepatitis B in the past?",0.85,0.15
+Hepatitis D,"Are you experiencing severe abdominal pain or swelling?",0.7,0.3
+Hepatitis D,"Do you have persistent nausea or vomiting?",0.65,0.35
+Hepatitis E,"Have you recently traveled to or lived in an area with poor sanitation?",0.8,0.2
+Hepatitis E,"Are you experiencing flu-like symptoms along with jaundice?",0.75,0.25
+Hepatitis E,"Have you consumed untreated water or undercooked meat?",0.85,0.15
+Alcoholic hepatitis,"Do you have a history of heavy alcohol consumption?",0.9,0.1
+Alcoholic hepatitis,"Are you experiencing abdominal pain or tenderness?",0.75,0.25
+Alcoholic hepatitis,"Have you noticed swelling in your legs or abdomen?",0.7,0.3
+Tuberculosis,"Are you experiencing a persistent cough lasting more than three weeks?",0.85,0.15
+Tuberculosis,"Do you have night sweats or fever?",0.8,0.2
+Tuberculosis,"Have you noticed unexplained weight loss or loss of appetite?",0.75,0.25
+Common Cold,"Are you experiencing a runny or stuffy nose?",0.9,0.1
+Common Cold,"Do you have a sore throat?",0.75,0.25
+Common Cold,"Are you experiencing mild to moderate fever?",0.6,0.4
+Pneumonia,"Are you experiencing chest pain when breathing or coughing?",0.8,0.2
+Pneumonia,"Do you have a high fever and chills?",0.85,0.15
+Pneumonia,"Are you experiencing shortness of breath or rapid breathing?",0.75,0.25
+Dimorphic hemorrhoids (piles),"Are you experiencing pain or discomfort during bowel movements?",0.8,0.2
+Dimorphic hemorrhoids (piles),"Do you have itching or irritation in the anal region?",0.7,0.3
+Dimorphic hemorrhoids (piles),"Have you noticed blood in your stool?",0.65,0.35
+Heart attack,"Are you experiencing chest pain or discomfort that may radiate to the arm, neck, or back?",0.9,0.1
+Heart attack,"Do you have shortness of breath?",0.85,0.15
+Heart attack,"Are you experiencing nausea, indigestion, or abdominal pain?",0.7,0.3
+Varicose veins,"Do you have visible, swollen veins in your legs?",0.9,0.1
+Varicose veins,"Are you experiencing aching pain or heaviness in your legs?",0.75,0.25
+Varicose veins,"Do you have swelling in your lower legs or ankles?",0.7,0.3
+Hypothyroidism,"Are you experiencing fatigue or unexplained weight gain?",0.85,0.15
+Hypothyroidism,"Do you have dry skin or hair loss?",0.75,0.25
+Hypothyroidism,"Are you feeling unusually cold or experiencing constipation?",0.8,0.2
+Hyperthyroidism,"Are you experiencing unintentional weight loss?",0.85,0.15
+Hyperthyroidism,"Do you have a rapid or irregular heartbeat?",0.8,0.2
+Hyperthyroidism,"Are you feeling nervous, anxious, or irritable?",0.75,0.25
+Hypoglycemia,"Are you experiencing shakiness or trembling?",0.85,0.15
+Hypoglycemia,"Do you feel unusually hungry or have a headache?",0.8,0.2
+Hypoglycemia,"Are you experiencing confusion or difficulty concentrating?",0.75,0.25
+Osteoarthritis,"Are you experiencing joint pain or stiffness, particularly in the morning?",0.8,0.2
+Osteoarthritis,"Do you have reduced flexibility or a grating sensation in your joints?",0.75,0.25
+Osteoarthritis,"Are you experiencing swelling around the affected joints?",0.7,0.3
+Arthritis,"Are you experiencing persistent joint pain or swelling?",0.8,0.2
+Arthritis,"Do you have stiffness in your joints, especially in the morning?",0.75,0.25
+Arthritis,"Are you experiencing redness or warmth around the affected joints?",0.7,0.3
+Paroxysmal Positional Vertigo,"Are you experiencing a spinning sensation when changing head positions?",0.9,0.1
+Paroxysmal Positional Vertigo,"Do you have nausea or vomiting associated with dizziness?",0.75,0.25
+Paroxysmal Positional Vertigo,"Are you experiencing balance problems or unsteadiness?",0.7,0.3
+Acne,"Are you experiencing pimples or blackheads on your face, chest, or back?",0.85,0.15
+Acne,"Do you have painful, pus-filled lumps under the skin?",0.75,0.25
+Acne,"Are you experiencing oily skin?",0.8,0.2
+Urinary tract infection,"Are you experiencing a burning sensation during urination?",0.85,0.15
+Urinary tract infection,"Do you have a frequent or intense urge to urinate, even when the bladder is empty?",0.8,0.2
+Urinary tract infection,"Is your urine cloudy, dark, or has a strong odor?",0.75,0.25
+Psoriasis,"Are you experiencing red patches of skin covered with silvery scales?",0.85,0.15
+Psoriasis,"Do you have dry, cracked skin that may bleed?",0.75,0.25
+Psoriasis,"Are you experiencing itching, burning, or soreness?",0.7,0.3
+Impetigo,"Are you experiencing red sores that quickly rupture, ooze for a few days, and then form a yellowish-brown crust?",0.85,0.15
+Impetigo,"Do you have itching around the sores?",0.75,0.25
+Impetigo,"Have you had recent contact with someone who has similar sores?",0.7,0.3

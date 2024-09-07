@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Prediction Error</h2>
+  <p>We're sorry, but an error occurred while trying to predict the disease. Please try again later or contact support if the problem persists.</p>
+  {% if error %}
+    <p>Error details: {{ error }}</p>
+  {% endif %}
+  <a href="{% url 'report_symptoms' %}">Back to Symptom Report</a>
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %}Welcome - Cure Compass{% endblock %}
+
+{% block extra_css %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/welcome.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="welcome-page">
+    <div class="content-wrapper">
+        <div class="welcome-container"> 
+            {% if user.is_authenticated %}
+                <!-- Link to Home Page where login/register are visible after logout -->
+                <h2>Welcome, {{ user.username }}!</h2>
+                <p>Thank you for logging in. You can now <a href="{% url 'report_symptoms' %}" class="button">report symptoms</a></p>
+            {% else %}
+                <!-- If user is not authenticated, display login/register links -->
+                <h2>Welcome to Cure Compass!</h2>
+                <p>Please <a href="{% url 'login' %}" class="button">login</a> or <a href="{% url 'register' %}" class="button">register</a></p>
+            {% endif %}
+
+            <!-- Logout button -->
+    
+            <form method="POST" action="{% url 'logout' %}">
+                {% csrf_token %}
+                
+                <button type="submit" class="logout-link">Logout</button>
+                <div>
+                <a href="{% url 'home' %}" class="back-to-home">Back to Home</a>
+                </div>
+            </form>
+        </div>
+
+        <!-- Back to Home Page link -->
+        
+    </div>
+</div>
+{% endblock %}

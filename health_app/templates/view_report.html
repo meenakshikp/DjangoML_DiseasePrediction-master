@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Symptom Report</h2>
+  <p>Reported on: {{ report.timestamp }}</p>
+  
+  <h3>Reported Symptoms:</h3>
+  <ul>
+    {% for symptom in report.symptoms.all %}
+      <li>{{ symptom.name }}</li>
+    {% endfor %}
+  </ul>
+
+  <h3>Potential Diseases:</h3>
+  <ul>
+    {% for prediction in predictions %}
+      <li>
+        {{ prediction.disease.name }} ({{ prediction.match_percentage|floatformat:2 }}% match)
+        <p>{{ prediction.disease.description }}</p>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <p><strong>Disclaimer:</strong> This is not a medical diagnosis. Please consult a healthcare professional for proper medical advice.</p>
+{% endblock %}
